@@ -1,5 +1,6 @@
 import * as React from "react";
-import { Card, Col, Row } from "react-bootstrap";
+import { Card, Col, Row, Badge } from "react-bootstrap";
+import "../Card.css"
 
 /**
  *
@@ -20,14 +21,15 @@ const Challenge2 = ({ news }) => {
     const { headline, imageUrl, date, attachmentUrl, newsId, text, outletName, contactName } = newsItem
     return(
       <Col key={newsId}>
-        <Card>
+        <Card className="shadow mb-5 bg-white text-center">
           <Card.Img variant="top" src={imageUrl} alt="Missing story image" />
           <Card.ImgOverlay>
-            <Card.Text>{date}</Card.Text>
+            <Badge>{date}</Badge>
           </Card.ImgOverlay>
           <Card.Body>
             <Card.Text>{outletName}</Card.Text>
             <Card.Title>{headline}</Card.Title>
+            <Card.Text>⦵</Card.Text>
             <Card.Text>{text}</Card.Text>
           </Card.Body>
         </Card>
