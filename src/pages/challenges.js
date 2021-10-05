@@ -17,7 +17,7 @@ const Challenge1 = () => {
     fetch(url)
       .then((response) => response.json())
       .then((data) => setNewsData(data))
-      // .then(console.log('newsData: ', newsData))
+      .then(console.log('newsData: ', newsData))
       .catch((err) => console.log("err: ", err));
   }, [setNewsData]);
   const edges = get(newsData, `Results.Result`, []).map((e) => {
