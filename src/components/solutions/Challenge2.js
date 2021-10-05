@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Card, Col } from "react-bootstrap";
 
 /**
  *
@@ -15,26 +16,34 @@ import * as React from "react";
  *
  */
 const Challenge2 = ({ news }) => {
+  console.log(news)
   const cards = news.map((newsItem) => {
     const { headline, imageUrl, date, attachmentUrl, newsId, text, outletName, contactName } = newsItem
-    return(
-      <section key={newsId}>
-        <article>
-          <img src={imageUrl} />
-          <p>{date}</p>
-          <p>{outletName}</p>
-          <h2>{headline}</h2>
-          <p>{text}</p>
-        </article>
-      </section>
-    )
-  })
-  console.log(cards)
+    // console.log(newsItem)
+    // console.log(news)
+    // return(
+      // <section key={newsId}>
+      //   <article>
+      //     <img src={imageUrl} />
+      //     <p>{date}</p>
+      //     <p>{outletName}</p>
+      //     <h2>{headline}</h2>
+      //     <p>{text}</p>
+      //   </article>
+      // </section>
+      // <Col key={newsId}>
+      //   <Card>
+      //
+      //   </Card>
+      // </Col>
+    // )
+  });
+  // console.log(cards)
   return(
     <section>
       {cards}
     </section>
-  )
+  );
 };
 
 export default Challenge2;

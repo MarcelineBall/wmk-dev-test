@@ -5,14 +5,14 @@ import * as React from "react";
 
 export class NewsItem {
     constructor(node){
-        this.headline = node.headline
-        this.imageUrl = node.imageUrl
-        this.date = node.date
-        this.attachmentUrl = node.attachmentUrl
-        this.newsId = node.newsId
-        this.text = node.text
-        this.outletName = node.outletName
-        this.contactName = node.contactName
+        this.headline = node.News_Headline
+        this.imageUrl = node.News_Article_Image_URL
+        this.date = node.News_Date
+        this.attachmentUrl = node.News_Attachment_Name
+        this.newsId = node.News_ID
+        this.text = node.News_Text
+        this.outletName = node.Outlet_Name
+        this.contactName = node.Contact_Name
         /**
          * Write a class that will represent a news item
          * based on data sourced from the API feed

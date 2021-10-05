@@ -33,7 +33,7 @@ const Challenge1 = () => {
    * creating an array of each NewsItem instance pulled via API
    */
   const news = edges.map((edge) => {
-    return edge.node
+    return new NewsItem(edge.node)
   })
   return (
     <Container>
