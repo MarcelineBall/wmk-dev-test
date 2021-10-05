@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Card, Col } from "react-bootstrap";
+import { Card, Col, Row } from "react-bootstrap";
 
 /**
  *
@@ -21,9 +21,11 @@ const Challenge2 = ({ news }) => {
     return(
       <Col key={newsId}>
         <Card>
-          <Card.Img src={imageUrl} alt="Missing story image" />
-          <Card.Body>
+          <Card.Img variant="top" src={imageUrl} alt="Missing story image" />
+          <Card.ImgOverlay>
             <Card.Text>{date}</Card.Text>
+          </Card.ImgOverlay>
+          <Card.Body>
             <Card.Text>{outletName}</Card.Text>
             <Card.Title>{headline}</Card.Title>
             <Card.Text>{text}</Card.Text>
@@ -33,9 +35,9 @@ const Challenge2 = ({ news }) => {
     )
   });
   return(
-    <section>
+    <Row xs={1} md={2} lg={4}>
       {cards}
-    </section>
+    </Row>
   );
 };
 
