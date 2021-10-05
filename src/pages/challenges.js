@@ -17,7 +17,7 @@ const Challenge1 = () => {
     fetch(url)
       .then((response) => response.json())
       .then((data) => setNewsData(data))
-      .then(console.log('newsData: ', newsData))
+      // .then(console.log('newsData: ', newsData))
       .catch((err) => console.log("err: ", err));
   }, [setNewsData]);
   const edges = get(newsData, `Results.Result`, []).map((e) => {
@@ -32,7 +32,9 @@ const Challenge1 = () => {
    * Save that structured data to the variable below,
    * creating an array of each NewsItem instance pulled via API
    */
-  const news = "replace this string";
+  const news = edges.map((edge) => {
+    return edge.node
+  })
   return (
     <Container>
       <Row className="flex-column">
