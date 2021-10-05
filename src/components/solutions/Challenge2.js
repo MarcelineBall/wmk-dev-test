@@ -15,8 +15,26 @@ import * as React from "react";
  *
  */
 const Challenge2 = ({ news }) => {
-  
-  return <>Replace with cards here</>;
+  const cards = news.map((newsItem) => {
+    const { headline, imageUrl, date, attachmentUrl, newsId, text, outletName, contactName } = newsItem
+    return(
+      <section key={newsId}>
+        <article>
+          <img src={imageUrl} />
+          <p>{date}</p>
+          <p>{outletName}</p>
+          <h2>{headline}</h2>
+          <p>{text}</p>
+        </article>
+      </section>
+    )
+  })
+  console.log(cards)
+  return(
+    <section>
+      {cards}
+    </section>
+  )
 };
 
 export default Challenge2;
