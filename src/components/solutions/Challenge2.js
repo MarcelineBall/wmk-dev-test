@@ -31,6 +31,7 @@ const Challenge2 = ({ news }) => {
             <Card.Title>{headline}</Card.Title>
             <Card.Text>⦵</Card.Text>
             <Card.Text>{text}</Card.Text>
+            <a href={attachmentUrl} class="stretched-link"></a>
           </Card.Body>
         </Card>
       </Col>
