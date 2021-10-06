@@ -24,7 +24,11 @@ const Challenge2 = ({ news }) => {
     return(
       <Col key={newsId}>
         <Card className="shadow mb-5 bg-white text-center">
-          <Card.Img variant="top" src={imageUrl} alt="Missing story image" />
+          <Card.Img
+            variant="top" src={imageUrl}
+            alt="Missing story image"
+            onError={(e)=>{e.target.src="https://freerangestock.com/sample/140410/abstract-geometric-background--cold-colors.jpg"}}
+          />
           <Card.ImgOverlay>
               <h2>
                 <Badge bg="black">{shortDate}</Badge>
