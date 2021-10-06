@@ -1,11 +1,11 @@
 .col {
- height: 800px;
+ height: 550px;
  margin-bottom: 2em;
 }
 
 .card {
   border-radius: 0;
-  height: 800px;
+  height: 550px;
 }
 
 .card-body {
@@ -33,13 +33,14 @@
   margin-bottom: 0.1em;
 }
 
-h3 {
+h4 {
   margin-bottom: 0
 }
 
 .circle {
   color: #B2B2B2;
   font-size: 2.2em;
+  margin-bottom: 0.1em;
 }
 
 @media only screen and (min-width: 350px) {
@@ -51,12 +52,22 @@ h3 {
     border-radius: 0;
     font-size: 0.6em;
   }
+
 }
 
-@media only screen and (min-width: 450px) {
+@media only screen and (min-width: 480px) {
   .badge {
     border-radius: 0;
     font-size: 0.65em;
+  }
+
+  .col {
+   height: 700px;
+   margin-bottom: 2em;
+  }
+
+  .card {
+    height: 700px;
   }
 }
 
@@ -73,7 +84,7 @@ h3 {
 
 @media only screen and (min-width: 768px) {
   .card-img-top {
-    max-height: 25%;
+    max-height: 37%;
   }
 
   .card-img-overlay {
@@ -85,11 +96,20 @@ h3 {
     border-radius: 0;
     font-size: 0.5em;
   }
+
+  .col {
+   height: 550px;
+   margin-bottom: 2em;
+  }
+
+  .card {
+    height: 550px;
+  }
 }
 
 @media only screen and (min-width: 992px) {
   .card-img-top {
-    max-height: 18%;
+    max-height: 28%;
   }
 
   .card-img-overlay {
@@ -112,6 +132,6 @@ h3 {
   }
 
   .card-img-top {
-    max-height: 23%
+    max-height: 34%
   }
 }

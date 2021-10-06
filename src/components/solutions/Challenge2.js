@@ -32,7 +32,7 @@ const Challenge2 = ({ news }) => {
           </Card.ImgOverlay>
           <Card.Body>
             <Card.Text className="outlet-name">{outletName}</Card.Text>
-            <Card.Title><h3>{headline}</h3></Card.Title>
+            <Card.Title><h4>{headline}</h4></Card.Title>
             <Card.Text className="circle">⦵</Card.Text>
             <Card.Text>{text}</Card.Text>
             <a href={attachmentUrl} className="stretched-link" label="link"></a>
