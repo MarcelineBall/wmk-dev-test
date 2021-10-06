@@ -25,7 +25,6 @@ const Challenge1 = () => {
       node: e
     };
   });
-  console.log(edges);
   /**
    * CHALLENGE 2
    * Use the NewsItem class you created to structure data.

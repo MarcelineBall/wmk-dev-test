@@ -19,26 +19,30 @@ import "../Card.css"
 const Challenge2 = ({ news }) => {
   const cards = news.map((newsItem) => {
     const { headline, imageUrl, date, attachmentUrl, newsId, text, outletName, contactName } = newsItem
+    const newDate = new Date(date);
+    const shortDate = newDate.toLocaleString("default", { month: 'short', day: 'numeric' });
+    console.log(headline)
     return(
       <Col key={newsId}>
         <Card className="shadow mb-5 bg-white text-center">
           <Card.Img variant="top" src={imageUrl} alt="Missing story image" />
           <Card.ImgOverlay>
-            <Badge>{date}</Badge>
+              <h2>
+                <Badge bg="black">{shortDate}</Badge>
+              </h2>
           </Card.ImgOverlay>
           <Card.Body>
-            <Card.Text>{outletName}</Card.Text>
-            <Card.Title>{headline}</Card.Title>
-            <Card.Text>⦵</Card.Text>
+            <Card.Text className="outlet-name">{outletName}</Card.Text>
+            <Card.Title><h3>{headline}</h3></Card.Title>
+            <Card.Text className="circle">⦵</Card.Text>
             <Card.Text>{text}</Card.Text>
-            <a href={attachmentUrl} class="stretched-link"></a>
           </Card.Body>
         </Card>
       </Col>
-    )
+    );
   });
   return(
-    <Row xs={1} md={2} lg={4}>
+    <Row xs={1} sm={1} md={2} lg={3} xl={3}>
       {cards}
     </Row>
   );
