@@ -18,10 +18,9 @@ import "../Card.css"
  */
 const Challenge2 = ({ news }) => {
   const cards = news.map((newsItem) => {
-    const { headline, imageUrl, date, attachmentUrl, newsId, text, outletName, contactName } = newsItem
+    const { headline, imageUrl, date, attachmentUrl, newsId, text, outletName } = newsItem
     const newDate = new Date(date);
     const shortDate = newDate.toLocaleString("default", { month: 'short', day: 'numeric' });
-    console.log(headline)
     return(
       <Col key={newsId}>
         <Card className="shadow mb-5 bg-white text-center">
@@ -36,6 +35,7 @@ const Challenge2 = ({ news }) => {
             <Card.Title><h3>{headline}</h3></Card.Title>
             <Card.Text className="circle">⦵</Card.Text>
             <Card.Text>{text}</Card.Text>
+            <a href={attachmentUrl} className="stretched-link" label="link"></a>
           </Card.Body>
         </Card>
       </Col>
